@@ -1,0 +1,12 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+  background-color: #7699cc;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  color: whitesmoke;
+  font-size: 2em;
+}
