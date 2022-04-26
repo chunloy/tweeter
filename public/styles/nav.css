@@ -11,12 +11,12 @@ nav {
   z-index: 2;
 }
 
-.nav_header {
+.nav-header {
   font-family: 'Bungee', cursive;
   
 }
 
-#down_arrow {
+#down-arrow {
   display: flex;
   justify-content: center;
 }

@@ -15,24 +15,18 @@ html {
  */
 
 body {
-  color: #545149;
+  color: #545454;
   background-color: #f4f1ec;
   font-family: 'Source Sans Pro', sans-serif;
+  width: 100vw;
   font-size: 24px;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  color: #000000;
+  margin: auto;
+  width: 90vw;
+  color: #545454;
 }
-
-.main_text {
-  width: 90%;
-  color: #000000;
-}
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
