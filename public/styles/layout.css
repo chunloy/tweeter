@@ -21,14 +21,16 @@ body {
   font-size: 24px;
 }
 
-main {
+.container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  color: #000000;
+}
+
+.main_text {
   width: 90%;
-  background-color: #7699cc;
-  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-  color: white;
+  color: #000000;
 }
 
 
