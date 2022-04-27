@@ -38,6 +38,9 @@ section > header {
   align-items: center;
   justify-content: space-between;
 }
+.tweet-container:hover {
+  box-shadow: 5px 5px rgb(255, 174, 0);
+}
 
 .profile-name {
   display: flex;
@@ -54,6 +57,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.icons:hover{
+  color: rgb(255, 174, 0);
 }
 
 
