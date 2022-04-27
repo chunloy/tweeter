@@ -1,11 +1,11 @@
-.tweet-container {
+article {
   border: 5px solid #545454; 
   border-radius: 1em;
   padding: 1em;
   margin: 2em 0;
 }
 
-.tweet-container:hover {
+article:hover {
   box-shadow: 5px 5px #e8a87c;
 }
 
@@ -37,9 +37,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: medium;
+  padding: 0 1em;
+  font-size: large;
   
 }
 
@@ -49,6 +48,6 @@ footer {
   color: #c38d9e;
 }
 
-.icons:hover{
+i:hover {
   color: #41b3a3;
 }
