@@ -9,13 +9,13 @@
   box-shadow: 5px 5px #e8a87c;
 }
 
-section > header {
+section > article > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header >span {
+header > span {
   color: #e27d60;
   font-size: larger;
 }
@@ -26,13 +26,11 @@ header >span {
   gap: 20px;
 }
 
-article {
-  border-bottom: 5px solid #5D5D5D;
-  margin: 2em 0 0 0;
-}
-
 article > p {
-  margin: 1.5em 1em;
+  margin: 0;
+  padding: 1.5em 1em;
+  border-bottom: 5px solid #5D5D5D;
+  font-size: xx-large;
 }
 
 footer {
