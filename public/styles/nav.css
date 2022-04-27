@@ -9,6 +9,8 @@ nav {
   font-size: 24px;
   padding: 0 1.5em;
   z-index: 2;
+  position: fixed;
+  top: 0;
 }
 
 .nav-header {
