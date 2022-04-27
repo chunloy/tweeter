@@ -6,9 +6,10 @@
   height: 400px;
   width: 100vw;
   margin-top: 2em;
-  background-color: #7699cc;
+  background-color: #e8a87c;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
   color: white;
   font-size: 2em;
   z-index: 0;
+  font-size: xxx-large;
 }

@@ -28,42 +28,6 @@ body {
   color: #545454;
 }
 
-.tweet-container {
-  border: 5px solid #545454; 
-  padding: 1em;
-}
-
-section > header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.tweet-container:hover {
-  box-shadow: 5px 5px rgb(255, 174, 0);
-}
-
-.profile-name {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-article {
-  border-bottom: 5px solid #5D5D5D;
-  margin: 2em 0 0 0;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.icons:hover{
-  color: rgb(255, 174, 0);
-}
-
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

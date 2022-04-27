@@ -4,7 +4,7 @@ nav {
   align-items: center;
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
+  background-color: #41b3a3;
   color: #FFFFFF;
   font-size: 24px;
   padding: 0 1.5em;
@@ -21,4 +21,5 @@ nav {
 #down-arrow {
   display: flex;
   justify-content: center;
+  color: #c38d9e;
 }
