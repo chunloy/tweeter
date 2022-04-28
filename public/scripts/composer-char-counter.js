@@ -9,9 +9,9 @@ $(document).ready(function() {
 
     //change the color of remaining characters if limit is exceeded
     if (characters > charLimit) {
-      $('#counter').css('color', 'red');
+      $('#counter').addClass('negative');
     } else {
-      $('#counter').css('color', '#545454');
+      $('#counter').removeClass('negative');
     }
   });
 });
