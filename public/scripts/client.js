@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const MAX_CHARS = 140;
 
 //generate html using user data
 const createTweetElement = function(userData) {
@@ -40,10 +41,21 @@ $(document).ready(function() {
   //event triggers when button is pressed
   $('form').submit(function(event) {
     event.preventDefault();
-    const $queryString = $('#tweet-text').serialize();
+    const textInput = $('#tweet-text').val().trim();
 
+    //send alert if input text is empty
+    if (!textInput) {
+      return alert('Cannot post an empty tweet!');
+    }
+
+    //send alert if text input exceeds limit
+    if (textInput.length > MAX_CHARS) {
+      return alert(`Content exceeds the ${MAX_CHARS} character limit. Please consider shortening the tweet.`);
+    }
+
+    console.log('here');
     //send input data to .json file
-    $.post('http://localhost:8080/tweets/', $queryString, function() {
+    $.post('http://localhost:8080/tweets/', $('#tweet-text').serialize(), function() {
       loadTweets();
     });
 

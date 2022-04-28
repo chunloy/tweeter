@@ -31,6 +31,7 @@ article > p {
   padding: 1.5em 1em;
   border-bottom: 5px solid #5D5D5D;
   font-size: xx-large;
+  overflow-wrap: break-word;
 }
 
 footer {
