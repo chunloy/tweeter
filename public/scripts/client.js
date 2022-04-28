@@ -30,6 +30,7 @@ const tweetData = [
   }
 ];
 
+//generate html using user data
 const createTweetElement = function(userData) {
   const $tweet = $(`
   <article>
@@ -50,11 +51,12 @@ const createTweetElement = function(userData) {
       </div>
     </footer>
   </article>`);
+
   return $tweet;
 };
 
+//render tweets in index.html
 const renderTweets = function(tweetData) {
-
   for (const tweeter of tweetData) {
     $('#tweets-container').prepend(createTweetElement(tweeter));
   }
@@ -62,4 +64,18 @@ const renderTweets = function(tweetData) {
 
 $(document).ready(function() {
   renderTweets(tweetData);
+
+  $('form').submit(function(event) {
+    event.preventDefault();
+    const $queryString = $('#tweet-text').serialize();
+
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:8080/tweets/',
+      data: $queryString
+    })
+      .then(() => {
+        console.log('success!');
+      });
+  });
 });
