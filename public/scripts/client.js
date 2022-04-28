@@ -49,7 +49,7 @@ const renderTweets = function(data) {
 };
 
 $(document).ready(function() {
-
+  //render html using .json file
   const loadTweets = function() {
     $.get('/tweets', function(data) {
       renderTweets(data);
@@ -58,20 +58,21 @@ $(document).ready(function() {
 
   //event triggers when button is pressed
   $('form').submit(function(event) {
-
     event.preventDefault();
+
     const textInput = $('#tweet-text').val().trim();
 
-    //render html using .json file
+    $('#empty-string').slideUp();
+    $('#max-limit').slideUp();
 
     //send alert if input text is empty
     if (!textInput) {
-      return alert('Cannot post an empty tweet!');
+      return $('#empty-string').slideDown();
     }
 
     //send alert if text input exceeds limit
     if (textInput.length > MAX_CHARS) {
-      return alert(`Content exceeds the ${MAX_CHARS} character limit. Please consider shortening the tweet.`);
+      return $('#max-limit').slideDown();
     }
 
     //send input data to .json file

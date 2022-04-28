@@ -13,13 +13,18 @@ nav {
   top: 0;
 }
 
-.nav-header {
+#nav-left {
   font-family: 'Bungee', cursive;
-  font-size: xx-large
+  font-size: xx-large;
 }
 
-#down-arrow {
+#nav-right {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+ div > i {
   color: #c38d9e;
+  margin: 10px;
 }

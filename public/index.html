@@ -36,28 +36,16 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
 </head>
-
-<!-- <script>alert('uh oh!')</script>
-<script>
-  $("body").empty();
-</script> -->
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span class="nav-header">tweeter</span>
-    <span>
-      <div>
-        <strong>Write</strong> a new tweet
-      </div>
-      <div id="down-arrow">
-        <div>
-          <i class="fas fa-regular fa-angles-down"></i>
-        </div>
-      </div>
-    </span>
+    <span id="nav-left">tweeter</span>
+    <div id="nav-right">
+      <span><strong>Write</strong> a new tweet</span>
+      <i class="fas fa-regular fa-angles-down fa-bounce"></i>
+    </div>
   </nav>
 
   <header class="profile">
@@ -73,7 +61,9 @@
   <main class="container">
     <section class="new-tweet">
       <form action="/tweets/" method="POST">
-        <label id="label" for="tweet-text"><strong>New Tweet</strong></label>
+        <p id="compose-tweet">Compose Tweet</p>
+        <p class="error" id="empty-string"><strong>⚠&ensp;CANNOT POST AN EMPTY TWEET!&ensp;⚠</strong></p>
+        <p class="error" id="max-limit"><strong>⚠&ensp;TWEET TOO LONG. TONE IT DOWN!&ensp;⚠</strong></p>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="button">
           <button id="button" type="submit">Tweet</button>
