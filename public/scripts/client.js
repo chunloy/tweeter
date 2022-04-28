@@ -5,20 +5,27 @@
  */
 const MAX_CHARS = 140;
 
+//function to prevent XSS
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 //generate html using user data
 const createTweetElement = function(userData) {
   const $tweet = $(`
   <article>
     <header>
       <div class="profile-header">
-        <img src="${userData.user.avatars}">
-        <span>${userData.user.name}</span>
+        <img src="${escape(userData.user.avatars)}">
+        <span>${escape(userData.user.name)}</span>
       </div>
-      <span><strong>${userData.user.handle}</strong></span>
+      <span><strong>${escape(userData.user.handle)}</strong></span>
     </header>
-    <p><strong>${userData.content.text}</strong></p>
+    <p><strong>${escape(userData.content.text)}</strong></p>
     <footer>
-      <p><strong>${timeago.format(userData.created_at)}</strong></p>
+      <p><strong>${timeago.format(escape(userData.created_at))}</strong></p>
       <div class="icon-group">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
