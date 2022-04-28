@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 //generate html using user data
 const createTweetElement = function(userData) {
   const $tweet = $(`
@@ -43,7 +17,7 @@ const createTweetElement = function(userData) {
     </header>
     <p><strong>${userData.content.text}</strong></p>
     <footer>
-      <p><strong>${userData.created_at}</strong></p>
+      <p><strong>${timeago.format(userData.created_at)}</strong></p>
       <div class="icon-group">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -56,26 +30,28 @@ const createTweetElement = function(userData) {
 };
 
 //render tweets in index.html
-const renderTweets = function(tweetData) {
-  for (const tweeter of tweetData) {
-    $('#tweets-container').prepend(createTweetElement(tweeter));
+const renderTweets = function(data) {
+  for (const user of data) {
+    $('#tweets-container').prepend(createTweetElement(user));
   }
 };
 
 $(document).ready(function() {
-  renderTweets(tweetData);
-
+  //event triggers when button is pressed
   $('form').submit(function(event) {
     event.preventDefault();
     const $queryString = $('#tweet-text').serialize();
 
-    $.ajax({
-      type: 'POST',
-      url: 'http://localhost:8080/tweets/',
-      data: $queryString
-    })
-      .then(() => {
-        console.log('success!');
+    //send input data to .json file
+    $.post('http://localhost:8080/tweets/', $queryString, function() {
+      loadTweets();
+    });
+
+    //render html using .json file
+    const loadTweets = function() {
+      $.get('http://localhost:8080/tweets/', function(data) {
+        renderTweets(data);
       });
+    };
   });
 });
