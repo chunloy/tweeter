@@ -7,13 +7,13 @@ Go ahead, create a tweet and post it! The live character counter helps users kee
 
 ## Screenshots
 
-Desktop Page
+### Desktop Page
 ![Sceenshot1](https://user-images.githubusercontent.com/101907461/165879795-3e3e5692-18c5-4b65-8498-981e5cfc9e47.png)
 
-Posting a Tweet
+### Posting a Tweet
 ![Screenshot2](https://user-images.githubusercontent.com/101907461/165880016-5e067bb1-d6d7-41df-b954-01be11bef7f6.png)
 
-Mobile Friendly
+### Mobile Friendly
 ![Screenshot3](https://user-images.githubusercontent.com/101907461/165880186-cc7e3a77-0c44-4471-978a-5cf3832ef975.png)
 
 ## Getting Started
