@@ -31,3 +31,21 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header {
+    margin: 40px;
+    max-width: 50vw;
+  }
+
+  .container {
+    max-width: 50vw;
+  }
+
+}

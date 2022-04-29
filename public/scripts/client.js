@@ -30,9 +30,9 @@ const createTweetElement = function(userData) {
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
         <i class="fa-solid fa-heart"></i>
-        </div>
-        </footer>
-        </article>`);
+      </div>
+    </footer>
+  </article>`);
 
   return $tweet;
 };

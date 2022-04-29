@@ -55,3 +55,10 @@ textarea:focus {
 .negative {
   color: #e27d60;
 }
+
+@media only screen and (min-width: 1024px) {
+  #compose-tweet {
+    margin-top: 0;
+    max-width: 768px; 
+  }
+}
