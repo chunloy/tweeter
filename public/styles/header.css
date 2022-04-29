@@ -13,9 +13,21 @@
   font-size: xxx-large;
 }
 
+.profile > div > img {
+  width: 175px;
+}
+
+.profile > div > span {
+  font-size: smaller;
+}
+
 @media only screen and (min-width: 1024px) {
   .profile {
     font-size: 1.5em;
     max-width: 400px;
   }
+
+ .profile > div > img {
+    width: 250px;
+  } 
 }
