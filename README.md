@@ -29,3 +29,4 @@ Go ahead, create a tweet and post it! The live character counter helps users kee
 - Express
 - Node 5.10.x or above
 - body-parser
+- chance
