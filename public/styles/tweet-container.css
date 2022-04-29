@@ -71,6 +71,10 @@ i:hover {
     gap: 20px;
   }
 
+  article > header > span {
+  font-size: larger;
+}
+
   article > p {
     margin: 0;
     padding: 1.5em 1em;
