@@ -2,10 +2,9 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-Go ahead, create a tweet and post it! The live character counter helps users keep their tweets to a manageable size. If the counter isn't enough, animated messages alert the user when their tweets are too long, or too short. A responsive layout presents content across a range of devices. This app is a work in progress - more interactive features will be added in future updates!
+This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
-
-## Screenshots
+## Final Product
 
 ### Desktop Page
 ![Sceenshot1](https://user-images.githubusercontent.com/101907461/165879795-3e3e5692-18c5-4b65-8498-981e5cfc9e47.png)
@@ -16,6 +15,13 @@ Go ahead, create a tweet and post it! The live character counter helps users kee
 ### Mobile Friendly
 ![Screenshot3](https://user-images.githubusercontent.com/101907461/165880186-cc7e3a77-0c44-4471-978a-5cf3832ef975.png)
 
+## Dependencies
+
+- Express
+- Node 5.10.x or above
+- body-parser
+- chance
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
@@ -23,10 +29,3 @@ Go ahead, create a tweet and post it! The live character counter helps users kee
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
-
-## Dependencies
-
-- Express
-- Node 5.10.x or above
-- body-parser
-- chance
